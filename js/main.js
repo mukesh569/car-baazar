@@ -32,8 +32,12 @@
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.back-to-top').fadeIn('slow');
+            $('.nav-bar').addClass("fixed-nav").slideIn();
+            $('.nav-bar').removeClass("position-relative");
         } else {
             $('.back-to-top').fadeOut('slow');
+            $('.nav-bar').removeClass("fixed-nav").slideOut();
+            $('.nav-bar').addClass("position-relative");
         }
     });
     $('.back-to-top').click(function () {
